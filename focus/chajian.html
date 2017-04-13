@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	*
+	{
+		margin:0px;
+		padding:0px;
+		list-style:none;
+	}
+	.box ul>li img
+	{
+		width:136px;
+		height:76px;
+	}
+	.box ul>li
+	{
+		margin-top:22px;
+		padding-left:5px;
+		padding-right:5px;
+		width:136px;
+		float:left;
+	}
+	.wrap
+	{
+		width:1000px;
+		height:120px;
+		background:#0f0;
+		position:relative;
+	}
+	#wrap1
+	{
+		margin:40px auto;
+	}
+	#wrap2
+	{
+		margin:180px auto;
+	}
+	.box
+	{
+		width:876px;
+		height:120px;
+		margin-left:57px;
+		overflow:hidden;
+		/* background:#f00; */
+	}
+	.left
+	{
+		width:0px;
+		height:0px;
+		border:20px solid transparent;
+		border-right-color:#fff;
+		position:absolute;
+		left:0px;
+		top:40px;
+		cursor:pointer;
+	}
+	.right
+	{
+		width:0px;
+		height:0px;
+		border:20px solid transparent;
+		border-left-color:#fff;
+		position:absolute;
+		right:0px;
+		top:40px;
+		cursor:pointer;
+	}
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap1">
+		<div class="box">
+			<ul>
+				<li><img src="images/pic1.jpg"></li>
+				<li><img src="images/pic2.jpg"></li>
+				<li><img src="images/pic3.jpg"></li>
+				<li><img src="images/pic4.jpg"></li>
+				<li><img src="images/pic5.jpg"></li>
+				<li><img src="images/pic6.jpg"></li>
+				<li><img src="images/pic7.jpg"></li>
+				<li><img src="images/pic8.jpg"></li>
+				<li><img src="images/pic9.jpg"></li>
+				<li><img src="images/pic10.jpg"></li>
+			</ul>
+		</div>
+		<div class="left" id="left1"></div>
+		<div class="right" id="right1"></div>
+</div>
+<div class="wrap" id="wrap2">
+		<div class="box">
+			<ul>
+				<li><img src="images/pic1.jpg"></li>
+				<li><img src="images/pic2.jpg"></li>
+				<li><img src="images/pic3.jpg"></li>
+				<li><img src="images/pic4.jpg"></li>
+				<li><img src="images/pic5.jpg"></li>
+				<li><img src="images/pic6.jpg"></li>
+				<li><img src="images/pic7.jpg"></li>
+				<li><img src="images/pic8.jpg"></li>
+				<li><img src="images/pic9.jpg"></li>
+				<li><img src="images/pic10.jpg"></li>
+			</ul>
+		</div>
+		<div class="left" id="left2"></div>
+		<div class="right" id="right2"></div>
+</div>
+<script src='js/jquery-1.8.3.min.js'></script>
+<script src='js/index.js'></script>
+<script type="text/javascript">
+	$('#wrap1').idear({
+			type:'mouseover',
+			speed:1500,
+			ind:3,
+			prev:'#left1',
+			next:'#right1'
+		})
+		$('#wrap2').idear({
+			type:'click',
+			speed:1000,
+			ind:3,
+			prev:'#left2',
+			next:'#right2'
+		})
+</script>
+</body>
+</html>
